@@ -8,6 +8,7 @@ import Profile from "@components/profile";
 import { data } from "autoprefixer";
 
 const MyProfile = () => {
+  const router = useRouter();
   const { data: session } = useSession();
   const [posts, setPosts] = useState([]);
 
@@ -22,11 +23,13 @@ const MyProfile = () => {
     if (session?.user.id) fetchPosts();
   }, []);
 
-  const handleEdit = () => {};
+  const handleEdit = (post) => {
+    router.push(`/update-prompt?id=${post._id}`);
+  };
 
-  const handleDelete = () => {};
+  const handleDelete = (post) => {};
   return (
-    < Profile
+    <Profile
       name="My"
       desc="Welcome to your personalized profile page"
       data={posts}
