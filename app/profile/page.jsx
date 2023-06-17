@@ -26,7 +26,7 @@ const MyProfile = () => {
 
   const handleDelete = () => {};
   return (
-    <Profile
+    < Profile
       name="My"
       desc="Welcome to your personalized profile page"
       data={posts}
