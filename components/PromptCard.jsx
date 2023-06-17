@@ -1,4 +1,4 @@
-import React from 'react'
+i
 
 const PromptCard = () => {
   return (
